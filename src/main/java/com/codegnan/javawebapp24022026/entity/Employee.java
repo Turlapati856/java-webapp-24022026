@@ -9,9 +9,12 @@ public class Employee {
 	private String loginPassword;
 	
 	public Employee() {
+		System.out.println("Employee()");
 	}
 
 	public Employee(int id, String firstName, String lastName, String dateOfJoining, String emailAddress, String loginPassword) {
+		System.out.println("Employee(int,String,String,String,String,String)");
+		
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;

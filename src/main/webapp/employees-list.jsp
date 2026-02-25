@@ -9,8 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%! 
-	EmployeeService employeeService = new EmployeeService();
+<% 
+	EmployeeService employeeService = EmployeeService.getInstance();
 %>
 
 	<table border="1" width="100%">

@@ -10,6 +10,18 @@ import java.util.ArrayList;
 import com.codegnan.javawebapp24022026.entity.Employee;
 
 public class EmployeeDao {
+	private static EmployeeDao employeeDao;
+	
+	private EmployeeDao() {
+		System.out.println("EmployeeDao()");
+	}
+	
+	public static EmployeeDao getInstance() {
+		if(employeeDao == null) {
+			employeeDao = new EmployeeDao();
+		}
+		return employeeDao;
+	}
 	public boolean insertEmployee(Employee employee) {
 		boolean isInsertSuccessful = false;
 

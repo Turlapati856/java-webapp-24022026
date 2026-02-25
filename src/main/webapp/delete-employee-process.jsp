@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%! 
-	EmployeeService employeeService = new EmployeeService();
+<% 
+	EmployeeService employeeService = EmployeeService.getInstance();
 %>
 
 <% 

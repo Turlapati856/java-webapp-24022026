@@ -6,7 +6,19 @@ import com.codegnan.javawebapp24022026.dao.EmployeeDao;
 import com.codegnan.javawebapp24022026.entity.Employee;
 
 public class EmployeeService {
-	EmployeeDao employeeDao = new EmployeeDao();
+	EmployeeDao employeeDao = EmployeeDao.getInstance();
+	
+	private static EmployeeService employeeService;
+	
+	private EmployeeService() {
+		System.out.println("EmployeeService()");
+		}
+	public static EmployeeService getInstance() {
+		if(employeeService == null) {
+			employeeService = new EmployeeService();
+		}
+		return employeeService;
+	}
 	
 	public boolean signUpEmployee(Employee employee) {
 		return employeeDao.insertEmployee(employee);

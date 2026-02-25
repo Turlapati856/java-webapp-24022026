@@ -8,8 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%! 
-	EmployeeService employeeService = new EmployeeService();
+<% 
+	EmployeeService employeeService = EmployeeService.getInstance();
 %>
 
 <jsp:useBean class="com.codegnan.javawebapp24022026.entity.Employee" id="employee"/>
